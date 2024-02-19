@@ -1,0 +1,91 @@
+body{
+    font-family: 'Trebuchet MS', sans-serif;
+    background: rgb(204, 255, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1)
+}
+
+.container .left_panel{
+    position: relative;
+    background: linear-gradient(to right, #02073f,#0825cd);
+    padding: 40px;
+}
+
+.container .right_panel{
+    position: relative;
+    background: white;
+    padding: 40px;
+}
+
+.profile .image_box img {
+    width: 200px; 
+    height: auto; 
+    border-radius: 50%; 
+    overflow: hidden;
+  }
+
+.profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+h2{
+    color: white;
+    font-size: 1.3em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+h3{
+    color: white;
+    font-size: 0.9em;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+p{
+    color: rgba(255, 255, 255, 0.598);
+    font-size: 0.75em;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Skills{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+ul{
+    color: rgba(255, 255, 255, 0.598);
+    font-size: 0.85em;
+    margin-top: 0px;
+    font-weight: 600;
+    line-height: 1.0em;
+}
