@@ -89,3 +89,31 @@ ul{
     font-weight: 600;
     line-height: 1.0em;
 }
+
+.Links{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+a{
+    color: rgba(238, 255, 3, 0.598);
+    font-size: 1.0em;
+    margin-top: 0.5px;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+a:hover {
+    color: red; 
+    text-decoration: underline; 
+  }
+
+  .Languages{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid white;
+}
