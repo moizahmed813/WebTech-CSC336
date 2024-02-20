@@ -7,6 +7,11 @@ body{
     min-height: 100vh;
 }
 
+h2:hover, h3:hover{
+    transform: translateY(-3px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 .container{
     position: relative;
     width: 100%;
@@ -32,11 +37,17 @@ body{
 }
 
 .profile .image_box img {
-    width: 200px; 
+    width: 180px; 
     height: auto; 
     border-radius: 50%; 
     overflow: hidden;
   }
+
+.profile .image_box:hover {
+    transform: scale(1.1);
+  filter: grayscale(0.3); 
+  opacity: 0.85;
+}
 
 .profile{
     position: relative;
@@ -153,6 +164,7 @@ a:hover {
     font-weight: 600;
     line-height: 1.0em;
 }
+
 
 .Education{
     border-bottom: 1px solid #090361;
@@ -295,7 +307,7 @@ a:hover {
 
 .Achievements .achvmnt{
     color: rgba(18, 1, 114, 0.801);
-    font-size: 0.85em;
+    font-size: 1.0em;
     margin-top: 0px;
     font-weight: 600;
     line-height: 1.0em;
