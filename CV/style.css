@@ -1,6 +1,6 @@
 body{
     font-family: 'Trebuchet MS', sans-serif;
-    background: rgb(163, 219, 253);
+    background: rgb(142, 244, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ body{
 
 .container .left_panel{
     position: relative;
-    background: linear-gradient(to right, #02073f,#0825cd);
+    background: linear-gradient(to right, #060238,#082ccd);
     padding: 40px;
 }
 
@@ -116,4 +116,165 @@ a:hover {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid white;
+}
+
+.Title{
+    margin-bottom: 50px;
+}
+
+.Title .Name{
+    color: #090361;
+    font-size: 3.5em;
+    margin-top: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.About_me{
+    border-bottom: 1px solid #090361;
+}
+.About_me .My_info{
+    color: #090361;
+    font-size: 1.3em;
+    margin-top: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.About_me .Info_para{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 0.85em;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Education{
+    border-bottom: 1px solid #090361;
+}
+.Education .Edu{
+    color: #090361;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Education .Degree{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 1.1em;
+    margin-top: 0px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Education .Institute{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Education .Duration{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Experience{
+    border-bottom: 1px solid #090361;
+}
+.Experience .Exp{
+    color: #090361;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Experience .Position{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 1.1em;
+    margin-top: 0px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Experience .Company{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Experience .Time{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Crs_Cert{
+    border-bottom: 1px solid #090361;
+}
+
+.Crs_Cert .Crs{
+    color: #090361;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Crs_Cert .course_list{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 0.85em;
+    margin-top: 0px;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Hobbies{
+    border-bottom: 1px solid #090361;
+}
+
+.Hobbies .Hby{
+    color: #090361;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Hobbies .Hby_Act{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 0.85em;
+    text-align: justify;
+    margin-top: 0px;
+    font-weight: 600;
+    line-height: 1.0em;
 }
