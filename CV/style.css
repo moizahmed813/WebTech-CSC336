@@ -278,3 +278,25 @@ a:hover {
     font-weight: 600;
     line-height: 1.0em;
 }
+
+.Achievements{
+    border-bottom: 1px solid #090361;
+}
+
+.Achievements .ach{
+    color: #090361;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.0em;
+}
+
+.Achievements .achvmnt{
+    color: rgba(18, 1, 114, 0.801);
+    font-size: 0.85em;
+    margin-top: 0px;
+    font-weight: 600;
+    line-height: 1.0em;
+}
