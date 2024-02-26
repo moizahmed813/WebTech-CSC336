@@ -1,92 +1,176 @@
 
 
 *{
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body{
-    background: rgb(121, 167, 254);
+  background: rgb(121, 167, 254);
 }
 .section-padding{
-    padding: 100px 0;
+  padding: 100px 0;
 }
 .carousel-item{
-    height: 100vh;
-    min-height: 100px;
+  height: 100vh;
+  min-height: 100px;
 }
 .carousel-caption{
-    bottom: 220px;
-    z-index: 2;
+  bottom: 220px;
+  z-index: 2;
 }
 .carousel-caption h5{
-    font-size: 45px;
-    letter-spacing: 2px;
-    margin-top: 25px;
+  color: rgb(121, 167, 254);
+  font-size: 45px;
+  letter-spacing: 2px;
+  margin-top: 25px;
 }
 .carousel-caption p{
-    width: 60%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
 }
 /* .carousel-inner::before{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+} */
+/* 
+.carousel-item {
+  position: relative;
 } */
 
-.carousel-item {
-    position: relative;
+.carousel-item::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); 
+}
+/* 
+.carousel-item img {
+  width: 100%;
+  height: auto;
+} */
+
+.navbar-nav a{
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+.navbar-brand .text{
+  color: rgb(121, 167, 254);
+  font-family: 'Lilita One', sans-serif;
+}
+
+.navbar-brand{
+  font-family: 'Lilita One', sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
+  color: #000;
+}
+
+.navbar-light .navbar-nav .navbar-link{
+  color:#000;
+}
+
+.nav-link:hover{
+  text-decoration: underline;
+}
+
+.btn:hover{
+  background-color: rgb(121, 167, 254); 
+  color: #000;
+}
+
+.w-100{
+  height: 100vh;
+}
+
+@media only screen and(min-width: 768px) and (max-width:991px){
+  .carousel-caption{
+    bottom: 370px;
+  }
+  .carousel-caption p{
+    width: 100%;
+  }
+}
+@media only screen and(max-width: 767px){
+  .navbar-nav{
+    text-align: center;
   }
   
-  .carousel-item::before {
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
+  .carousel-caption{
+    bottom: 125px;
+  }
+  .carousel-caption h5{
+    font-size: 17px;
+  }
+  .carousel-caption a{
+    padding: 10px 15px;
+  }
+  .carousel-caption p{
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); 
+    line-height: 1.6;
+    font-size: 12px;
   }
-  
-  .carousel-item img {
-    width: 100%;
-    height: auto;
-  }
+}
 
-  .navbar-nav a{
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
+.grid{
+  width: 92%;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
 
+.grid .left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  padding: 40px;
+}
 
-  .navbar-brand .text{
-    color: rgb(121, 167, 254);
-    font-family: 'Lilita One', sans-serif;
-  }
+.grid .left .abtimg img{
+  width: 400px;
+  height: auto;
+}
 
-  .navbar-brand{
-    font-family: 'Lilita One', sans-serif;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
+.grid .left .abtimg:hover{
+  transform: scale(1.1);
+  filter: grayscale(0.3); 
+  opacity: 0.85;
+}
 
-  .nav-link:hover{
-    text-decoration: underline;
-  }
+.grid .right{
+  text-align: justify;
+  position: relative;
+  background: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+}
 
-  .navbar-brand:hover{
-    color:#000;
-  }
+.grid .right:hover{
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
 
-.btn{
-    background-color: rgb(121, 167, 254); 
-    color: #000;
-  }
+.grid .right h2{
+  font-size: 28px;
+}
 
-
+.grid .right p{
+  font-size: 12px;
+}
