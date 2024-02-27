@@ -71,8 +71,7 @@ body{
 
 .navbar-brand{
   font-family: 'Lilita One', sans-serif;
-  font-size: 25px;
-  text-transform: uppercase;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -145,7 +144,7 @@ body{
 }
 
 .grid .left .abtimg img{
-  width: 400px;
+  width: 95%;
   height: auto;
 }
 
@@ -322,6 +321,7 @@ textarea {
 
 .abtus .leftform p{
   font-size: 16px;
+  text-align: justify;
 }
 
 .rightform:hover{
@@ -329,4 +329,30 @@ textarea {
   transform: translateY(-5px);
 }
 
+.footer{
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+}
+.footer .heavens, .footer .taste{
+  font-family: 'Lilita One', sans-serif;
+  font-size: 60px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer p{
+  padding: 8px;
+  font-size: 18px;
+}
+.heavens{
+  color: rgb(121, 167, 254);
+}
+.taste{
+  color: #000;
+}
 
