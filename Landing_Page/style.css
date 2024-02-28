@@ -76,6 +76,10 @@ body{
   letter-spacing: 2px;
 }
 
+.navbar-brand:hover{
+  transform: scale(1.1);
+}
+
 .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover{
   color: #000;
 }
