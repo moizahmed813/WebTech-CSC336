@@ -29,6 +29,20 @@ body{
   font-size: 18px;
   line-height: 1.9;
 }
+
+.carousel-indicators .active{
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-bottom: 5px;
+}
+
+.carousel-indicators .round{
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-bottom: 3px;
+}
 /* .carousel-inner::before{
   position: absolute;
   width: 100%;
