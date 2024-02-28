@@ -110,6 +110,7 @@ body{
 .btn:hover{
   background-color: rgb(121, 167, 254); 
   color: #000;
+  transform: scale(1.1);
 }
 
 .w-100{
