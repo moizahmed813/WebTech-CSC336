@@ -27,5 +27,6 @@ Following are the tools and technologies that will be used during the entire dur
 - Git/GitHub
 - MERN Stack
 - HTML, CSS & Bootstrap
+- JavaScript
 
 Looking forward to connect and collaborate with fellow individuals.💡
