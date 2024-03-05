@@ -1,8 +1,8 @@
 function slideContent(side) {
-    const leftContent = document.getElementById('leftContent');
-    const rightContent = document.getElementById('rightContent');
-    const signInForm = document.getElementById('signInForm');
-    const signUpForm = document.getElementById('signUpForm');
+    const leftContent = document.getElementById('signin');
+    const rightContent = document.getElementById('signup');
+    const signInForm = document.getElementById('signinform');
+    const signUpForm = document.getElementById('signupform');
   
     if (side === 'left') {
       leftContent.classList.add('slide-left');
