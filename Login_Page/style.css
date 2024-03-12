@@ -534,9 +534,6 @@ textarea {
   letter-spacing: 2px;
 }
 
-.hidden {
-  display: none;
-}
 
 @keyframes slideLeft {
   from {

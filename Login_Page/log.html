@@ -44,25 +44,33 @@
         <div class="signin">
             <img src="image16.png" alt="image16" class="overlay-image">
             <div class="content"><h2>Welcome Back!</h2>
-                <button class="btn btn-warning mt-3" onclick="slideContent('left')">Sign in</button>
-            </div>
-            <div class="form hidden" id="signinform">
-                <form action="#" method="post">
-                    <div class="form-group">
-                      <label for="email">Email:</label>
-                      <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                      </div>
-                      <button class="btn btn-warning mt-3">Submit</button> 
-            </div>
+              <form id="signInForm">
+                <div class="mb-3">
+                  <label for="signInEmail" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="signInEmail" required>
+                </div>
+                <div class="mb-3">
+                  <label for="signInPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="signInPassword" required>
+                </div>
+              </form>
+              <button type="button" class="btn btn-warning mt-3" onclick="slideContent('left')">Sign in</button>
+              </div>
             </div>
         <div class="signup">
             <img src="image17.png" alt="image17" class="overlay-image">
             <div class="content"> <h2>Let's Get Started!</h2>
-                <p class="btn btn-warning mt-3" onclick="slideContent('right')">Sign up</p>
+              <form id="signUpForm">
+                <div class="mb-3">
+                  <label for="signUpEmail" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="signUpEmail" required>
+                </div>
+                <div class="mb-3">
+                  <label for="signUpPassword" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="signUpPassword" required>
+                </div>
+              </form>
+              <button type="button" class="btn btn-warning mt-3" onclick="slideContent('right')">Sign up</button>
             </div>
            </div>
 

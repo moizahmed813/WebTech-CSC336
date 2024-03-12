@@ -1,15 +1,13 @@
-function slideContent(side) {
-    const leftContent = document.getElementById('signin');
-    const rightContent = document.getElementById('signup');
-    const signInForm = document.getElementById('signinform');
-    const signUpForm = document.getElementById('signupform');
-  
-    if (side === 'left') {
-      leftContent.classList.add('slide-left');
-      signInForm.classList.remove('hidden');
-    } else {
-      rightContent.classList.add('slide-right');
-      signUpForm.classList.remove('hidden');
-    }
+function slideContent(direction) {
+  const formGrid = document.querySelector('.form-grid');
+
+  if (direction === 'left') {
+    formGrid.classList.remove('signup');
+    formGrid.classList.add('signin');
+  } else if (direction === 'right') {
+    formGrid.classList.remove('signin');
+    formGrid.classList.add('signup');
   }
+}
+
   
