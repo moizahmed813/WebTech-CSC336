@@ -418,4 +418,131 @@ textarea {
   letter-spacing: 2px;
 }
 
+#addStoryForm label {
+  font-family: 25px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#addStoryForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(121, 167, 254);
+  border-radius: 4px;
+}
+
+#addStoryForm{
+  background: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.storyform{
+  width: 92%;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.storyform .leftside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  padding: 40px;
+}
+
+.storyform .leftside h2{
+  font-weight: bold;
+  font-size: 40px;
+}
+
+    .story-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story {
+      font-family: 'Poppins', sans-serif;
+      
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        width: 50%;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .story h3{
+      font-weight: bold;
+    }
+
+    .story h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .story p {
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .editBtn {
+        background-color: rgba(255, 208, 1, 0.886);
+        color: #000;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+
+    .deleteBtn {
+        background-color: red;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .editBtn:hover, .deleteBtn:hover {
+        background-color: rgb(121, 167, 254); 
+        color: #000;
+        transform: scale(1.1);
+    }
+
+    .add-story-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .add-story-form input[type="text"], .add-story-form textarea {
+        width: 50%;
+        max-width: 600px;
+        margin-bottom: 10px;
+    }
+
+    .add-story-form button {
+        width: 50%;
+        max-width: 600px;
+    }
+
+
 
