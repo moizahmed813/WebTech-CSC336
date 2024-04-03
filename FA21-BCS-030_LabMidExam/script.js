@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         
         image.addEventListener('mouseout', function() {
-            document.getElementById('main-menu').getElementsByTagName('li')[0].innerText = 'Main Menu Item';
+            document.getElementById('main-menu').getElementsByTagName('li')[0].innerText = 'JavaScript Event Handler';
         });
     });
 });
