@@ -112,3 +112,18 @@
     font-size: 20px;
 
   }
+
+  .section2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textitem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textitem p {
+    margin-right: 10px; /* Adjust margin as needed */
+}
