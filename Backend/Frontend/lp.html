@@ -36,6 +36,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#api" onclick="goToAPI()">API</a>
               </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="#signin" onclick="goToLogin()">Sign-In</a>
+              </li>     
             </ul>
             
           </div>
@@ -44,6 +47,17 @@
       <script>
         function goToAPI() {
           window.location.href = "api.html";
+        }
+        function goToLogin() {
+          window.location.href = "login.html";
+        }
+        function navigateToDiv() {
+            const targetUrl = 'products.html#breads';
+            window.location.href = targetUrl;
+        }
+        function navigateToDiv2() {
+            const targetUrl = 'products.html#beverages';
+            window.location.href = targetUrl;
         }
       </script>
     <section id="home" class="hsp">
@@ -60,7 +74,7 @@
             <div class="carousel-caption">
               <h5>Celebrate with a slice of art.</h5>
               <p>Indulge your senses with our exquisite selection of artisanal cakes. From decadent chocolate delights to refreshing fruit-infused creations, our expert bakers craft each cake with precision and passion.</p>
-              <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+              <p><a href="#" class="btn btn-warning mt-3" onclick="window.location.href='products.html?id=cakes'">Learn More</a></p>
             </div>
           </div>
           <div class="carousel-item">
@@ -68,7 +82,7 @@
             <div class="carousel-caption">
               <h5>Take a break and treat yourself.</h5>
               <p>Quench your thirst with our delightful array of beverages. From rich and aromatic coffees to refreshing cup of teas, our beverage selection complements the sweetness of our baked treats.</p>
-              <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+              <p><a href="#" class="btn btn-warning mt-3" onclick="navigateToDiv2()">Learn More</a></p>
             </div>
           </div>
           <div class="carousel-item">
@@ -109,7 +123,7 @@
           <div class="right">
             <h2>We Provide Oven Fresh<br> Bakery Products</h2>
             <p>Welcome to Heaven's Taste Bakery, where every delightful creation is a testament to our passion for crafting exceptional treats. Nestled at the heart of our culinary haven, our bakery is more than a kitchen—it's a symphony of flavors and a celebration of artistry. With a commitment to quality and creativity, we embark on a journey to tantalize your taste buds with an exquisite array of artisanal cakes, heavenly beverages, and irresistible snacks. From the rich aroma of freshly brewed coffee to the decadent layers of our signature cakes, each creation is a masterpiece meticulously prepared by our expert bakers. At Heaven's Taste, we invite you to indulge in a sensory experience that goes beyond the ordinary, where every bite tells a story of dedication and flavor fusion. Discover the essence of our bakery, where moments are made sweeter and memories are baked to perfection.</p>
-            <p class="btn btn-warning mt-3">Learn More</p>
+            <p class="btn btn-warning mt-3" onclick="window.location.href='products.html?id=cakes'">Learn More</p>
           </div>
         </div>
       </section>
@@ -123,21 +137,21 @@
           <img src="image08.png" alt="">
           <div class="overlay">
             <h3>Cakes</h3>
-            <p class="btn btn-warning mt-3">Show all</p>
+            <p class="btn btn-warning mt-3" onclick="window.location.href='products.html?id=cakes'">Show all</p>
           </div>
         </div>
         <div class="imgbox">
           <img src="image09.png" alt="">
           <div class="overlay">
             <h3>Breads</h3>
-            <p class="btn btn-warning mt-3">Show all</p>        
+            <p class="btn btn-warning mt-3" onclick="navigateToDiv()">Show all</p>        
           </div>
         </div>
         <div class="imgbox">
           <img src="image10.png" alt="">
           <div class="overlay">
             <h3>Beverages</h3>
-            <p class="btn btn-warning mt-3">Show all</p>        
+            <p class="btn btn-warning mt-3" onclick="navigateToDiv2()">Show all</p>        
           </div>
         </div>
         <div class="imgbox">
