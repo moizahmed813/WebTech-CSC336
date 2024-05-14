@@ -63,6 +63,14 @@
             const targetUrl = 'products.html#snacks';
             window.location.href = targetUrl;
         }
+        function navigateToDiv4() {
+            const targetUrl = 'products.html#doughnuts';
+            window.location.href = targetUrl;
+        }
+        function navigateToDiv5() {
+            const targetUrl = 'products.html#biscuits';
+            window.location.href = targetUrl;
+        }
       </script>
     <section id="home" class="hsp">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -102,7 +110,7 @@
             <div class="carousel-caption">
               <h5>Here's a dozen reasons to be happy!</h5>
               <p>Embark on a delectable adventure through the offerings of our bakery, where our doughnuts are a harmonious blend of flavors and textures. From the timeless allure of our glazed confections to the inventive twists on tradition, each bite is a celebration of sweetness.</p>
-              <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+              <p><a href="#" class="btn btn-warning mt-3" onclick="navigateToDiv4()">Learn More</a></p>
             </div>
           </div>
         </div>
@@ -169,14 +177,14 @@
           <img src="image11.png" alt="">
           <div class="overlay">
             <h3>Doughnuts</h3>
-            <p class="btn btn-warning mt-3">Show all</p>        
+            <p class="btn btn-warning mt-3" onclick="navigateToDiv4()">Show all</p>        
           </div>
         </div>
         <div class="imgbox">
           <img src="image12.png" alt="">
           <div class="overlay">
             <h3>Biscuits</h3>
-            <p class="btn btn-warning mt-3">Show all</p>        
+            <p class="btn btn-warning mt-3" onclick="navigateToDiv5()">Show all</p>        
           </div>
         </div>
       </div>
