@@ -1,8 +1,11 @@
 
-const express = require('express')
+const express = require('express');
+const connectDb = require('./Config/dbConnection');
+const errorHandler = require('./Middleware/errorHandler');
 const app = express()
 const dotenv = require("dotenv").config();
 
+connectDb();
 app.use(express.static(__dirname + '/Frontend'));
 
 app.get('/', (req, res) => {
@@ -15,6 +18,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 app.use("/api/products", require("./Routes/productRoutes"));
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
