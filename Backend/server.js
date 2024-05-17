@@ -5,21 +5,28 @@ const errorHandler = require('./Middleware/errorHandler');
 const { default: mongoose } = require('mongoose');
 const app = express()
 const dotenv = require("dotenv").config();
+const bodyParser = require('body-parser');
 
 connectDb();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.static('public'));
+
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/Frontend'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/Frontend/lp.html');
+    //res.sendFile(__dirname + '/Frontend/lp.html');
+    res.render("lp");
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/Frontend/api.html');
+    res.render("api");
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/Frontend/products.html');
+    res.render("products");
 });
 
 

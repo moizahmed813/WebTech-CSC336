@@ -16,16 +16,18 @@ const getProducts = asyncHandler(async (req,res) =>{
 
 const addProduct = asyncHandler(async (req,res) =>{
     console.log("The request body is: ", req.body);
-    const {name, category, price} = req.body;
+    const {imageUrl, name, category, price} = req.body;
     if(!name || !category || !price){
         res.status(400);
         throw new Error("All fields are mandatory!");
     }
     const product = await Product.create({
+        imageUrl,
         name,
         category,
         price,
     });
+
     res.status(201).json(product);
 });
 
@@ -71,8 +73,8 @@ const deleteProduct = asyncHandler(async (req,res) =>{
         res.status(404);
         throw new Error("Product not found!");
     }
-    await Product.remove();
+    await Product.findByIdAndDelete(req.params.id);
     res.status(200).json(product);
 });
 
-module.exports = {getProducts, addProduct, getProduct, updateProduct, deleteProduct}
+module.exports = {getProducts, addProduct, getProduct, updateProduct, deleteProduct};
