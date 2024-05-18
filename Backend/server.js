@@ -4,11 +4,17 @@ const connectDb = require('./Config/dbConnection');
 const errorHandler = require('./Middleware/errorHandler');
 const { default: mongoose } = require('mongoose');
 const app = express()
+const path = require('path');
 const dotenv = require("dotenv").config();
 const bodyParser = require('body-parser');
-
 connectDb();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.set('view engine', 'ejs');
+
+app.use(express.static(path.join(__dirname, 'Frontend')));
+
 app.use(express.static(__dirname + '/Frontend'));
 
 app.get('/', (req, res) => {
@@ -23,7 +29,6 @@ app.get('/', (req, res) => {
 app.get('/', (req, res) => {
     res.render("products");
 });
-
 
 app.use(express.json());
 app.use("/api/products", require("./Routes/productRoutes"));
