@@ -704,5 +704,96 @@ textarea {
     color: white;
     border-color: white;
   }
+.card-horizontal{
+  align-items: center;
+}
+.cart-img {
+    max-width: 150px;
+    height: auto;
+}
+.cart-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 10px;
+}
 
- 
+
+/* Overall cart container styles */
+#cart-container {
+  padding: 15px;
+  align-items: center;
+}
+
+/* Individual product card styles */
+
+.card-horizontal .cart-body {
+  width: 70%;
+  padding: 15px;
+}
+
+.cart-img {
+  width: 30%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Styles for product information */
+.cart-body p {
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.cart-body label{
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.cart-body label:hover{
+  font-weight: bold;
+}
+
+/* Quantity input styles */
+.quantity-input {
+  width: 100px;
+  height:50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Total price styles */
+.total-price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Remove button styles */
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Grand total styles */
+#cart-container p:last-child {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 15px;
+}
+
+.cartbtn{
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+}
+
+#continue-shopping{
+  width: 200px;
+  margin-right: 20px;
+}
+
+#checkout{
+  width: 200px;
+  margin-right: 20px;
+}

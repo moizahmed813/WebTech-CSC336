@@ -30,6 +30,10 @@ app.get('/', (req, res) => {
     res.render("products");
 });
 
+app.get('/', (req, res) => {
+    res.render("cart");
+});
+
 app.use(express.json());
 app.use("/api/products", require("./Routes/productRoutes"));
 app.use(errorHandler);

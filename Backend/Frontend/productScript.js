@@ -1,3 +1,7 @@
+function generateUniqueId() {
+    return '_' + Math.random().toString(36).substr(2, 9);
+}
+
 fetch('/api/products')
             .then(response => response.json())
             .then(products => {
@@ -9,6 +13,10 @@ fetch('/api/products')
                 const bisContainer = document.getElementById('biscontainer');
 
                 products.forEach(product => {
+
+                    if (!product.id) {
+                        product.id = generateUniqueId();
+                    }
                     
                     const productCard = document.createElement('div');
                     productCard.classList.add('card');
@@ -33,6 +41,7 @@ fetch('/api/products')
                     const button = document.createElement('button');
                     button.textContent = 'Buy Now';
                     button.classList.add('btn', 'btn-warning', 'mt-3');
+                    button.addEventListener('click', () => addToCart(product));
                     productCard.appendChild(button);
 
                     if (product.category === 'Cakes') {
@@ -53,3 +62,16 @@ fetch('/api/products')
             .catch(error => {
                 console.error('Error fetching products:', error);
             });
+
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProduct = cart.find(item => item.id === product.id);
+    const priceNumber = parseFloat(product.price.replace('$', ''));
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({ ...product, priceNumber, quantity: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.location.href = 'cart.html';
+}
