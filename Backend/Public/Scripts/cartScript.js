@@ -1,9 +1,10 @@
 document.getElementById('continue-shopping').addEventListener('click', () => {
-    window.location.href = 'products.html';
+    window.location.href = '/products';
 });
 
 document.getElementById('checkout').addEventListener('click', () => {
-    window.location.href = 'checkout.html';
+    console.log('Checkout button clicked');
+    document.getElementById('checkout-form').dispatchEvent(new Event('submit'));
 });
 
 const cartContainer = document.getElementById('cart-container');
@@ -93,3 +94,40 @@ function calculateGrandTotal() {
 }
 
 renderCart();
+
+document.getElementById('checkout-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    placeOrder();
+});
+
+function placeOrder() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const deliveryInfo = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        phoneNo: document.getElementById('phoneNo').value,
+        email: document.getElementById('email').value,
+        address: document.getElementById('address').value
+    };
+    fetch('/api/orders/submit-order', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ cart, deliveryInfo })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'Order submitted successfully') {
+            alert('Order placed successfully!');
+            localStorage.removeItem('cart');
+            window.location.href = '/cart'; 
+        } else {
+            alert('Error placing order. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error placing order:', error);
+        alert('Error placing order. Please try again.');
+    });
+}

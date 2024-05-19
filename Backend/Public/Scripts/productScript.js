@@ -73,5 +73,5 @@ function addToCart(product) {
         cart.push({ ...product, priceNumber, quantity: 1 });
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    window.location.href = 'cart.html';
+    window.location.href = '/cart';
 }

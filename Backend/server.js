@@ -13,30 +13,38 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.static(path.join(__dirname, 'Frontend')));
 
 app.use(express.static(__dirname + '/Frontend'));
 
 app.get('/', (req, res) => {
-    //res.sendFile(__dirname + '/Frontend/lp.html');
-    res.render("lp");
-});
+    res.render('lp');
+  });
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.render("api");
 });
 
-app.get('/', (req, res) => {
+app.get('/products', (req, res) => {
     res.render("products");
 });
 
-app.get('/', (req, res) => {
+app.get('/cart', (req, res) => {
     res.render("cart");
+});
+
+app.get('/login', (req, res) => {
+    res.render("login");
 });
 
 app.use(express.json());
 app.use("/api/products", require("./Routes/productRoutes"));
 app.use(errorHandler);
+
+app.use(express.json());
+app.use('/api/orders', require("./Routes/orderRoutes"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
