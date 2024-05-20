@@ -732,12 +732,6 @@ textarea {
   padding: 15px;
 }
 
-.cart-img {
-  width: 30%;
-  object-fit: cover;
-  margin-right: 15px;
-}
-
 /* Styles for product information */
 .cart-body p {
   margin-bottom: 5px;
