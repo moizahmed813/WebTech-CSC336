@@ -7,6 +7,9 @@ const app = express()
 const path = require('path');
 const dotenv = require("dotenv").config();
 const bodyParser = require('body-parser');
+var session = require("express-session");
+const bcrypt = require('bcrypt');
+const Admin = require('./Models/adminModel');
 connectDb();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -39,6 +42,10 @@ app.get('/login', (req, res) => {
     res.render("login");
 });
 
+app.get('/admin', (req, res) => {
+    res.render("admin");
+});
+
 app.use(express.json());
 app.use("/api/products", require("./Routes/productRoutes"));
 app.use(errorHandler);
@@ -46,6 +53,46 @@ app.use(errorHandler);
 app.use(express.json());
 app.use('/api/orders', require("./Routes/orderRoutes"));
 
+
+app.use(session({ secret: process.env.SESSION_SECRET,
+     resave: false,
+     saveUninitialized: true,
+     cookie: { maxAge: 3600000 }
+}));
+
+app.use(express.json());
+
+app.post('/signup', async (req, res) => {
+    const { email, password } = req.body;
+    try{const hashedPassword = await bcrypt.hash(password, 10);
+    const user = new Admin({ email, password: hashedPassword });
+    await user.save();
+    res.status(200).json({ message: 'Admin added successfully' });
+    } catch(err){
+        res.status(500).json({ message: 'Error adding admin', err });
+    }   
+  });
+
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+    const user = await Admin.findOne({ email });
+    if (user && await bcrypt.compare(password, user.password)) {
+      req.session.userId = user._id;
+      res.redirect('/admin');
+    } else {
+        res.redirect('/login');
+    }
+  });
+  
+  app.get("/logout", (req, res) => {
+    req.session.destroy();
+    res.redirect('/login');
+  });
+  
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
