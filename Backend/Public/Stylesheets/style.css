@@ -562,6 +562,11 @@ textarea {
     #addStoryForm select{
       width: 100%;
         margin-bottom: 10px;
+        border: 1px solid rgb(121, 167, 254);
+  }
+
+  #addStoryForm:hover{
+    transform: translateY(-6px);
   }
     
     .add-story-form button {
@@ -811,5 +816,71 @@ textarea {
 #checkout{
   width: 200px;
   margin-right: 20px;
+}
+
+#editForm{
+  background: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  width: 92%;
+  margin: 50px;
+}
+
+#editForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(121, 167, 254);
+  border-radius: 4px;
+}
+
+#editForm select{
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgb(121, 167, 254);
+  border-radius: 4px;
+}
+
+#editForm:hover{
+  transform: translateY(-6px);
+}
+
+.table{
+  background: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 8px;
+  width: 92%;
+  margin: 50px;
+}
+
+.table:hover{
+  transform: translateY(-6px);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  margin-bottom: 30px;
+}
+
+.pagination button {
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.pagination button:hover{
+  text-decoration: underline;
+  font-weight: bold;
 }
 
