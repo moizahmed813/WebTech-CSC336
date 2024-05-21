@@ -42,9 +42,6 @@ app.get('/login', (req, res) => {
     res.render("login");
 });
 
-app.get('/admin', (req, res) => {
-    res.render("admin");
-});
 
 app.use(express.json());
 app.use("/api/products", require("./Routes/productRoutes"));
@@ -57,8 +54,16 @@ app.use('/api/orders', require("./Routes/orderRoutes"));
 app.use(session({ secret: process.env.SESSION_SECRET,
      resave: false,
      saveUninitialized: true,
-     cookie: { maxAge: 3600000 }
+     cookie: { maxAge: 7200000 }
 }));
+
+function requireAuth(req, res, next) {
+    if (req.session && req.session.userId) {
+        return next();
+    } else {
+        res.redirect('/login');
+    }
+}
 
 app.use(express.json());
 
@@ -77,6 +82,10 @@ app.get('/login', (req, res) => {
     res.render('login');
 });
 
+app.get('/admin', requireAuth, (req, res) => {
+    res.render('admin');
+});
+
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
     const user = await Admin.findOne({ email });
@@ -89,8 +98,13 @@ app.post("/login", async (req, res) => {
   });
   
   app.get("/logout", (req, res) => {
-    req.session.destroy();
-    res.redirect('/login');
+    req.session.destroy(function(err) {
+        if (err) {
+            console.error(err);
+        } else {
+            res.redirect('/login');
+        }
+    });
   });
   
 const PORT = process.env.PORT || 5000;

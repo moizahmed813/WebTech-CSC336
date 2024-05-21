@@ -465,6 +465,25 @@ textarea {
   font-size: 40px;
 }
 
+.allprod{
+  padding: 20px;
+      display: flex;
+    flex-direction: column;
+     align-items: center;
+     position: relative;
+      justify-content: center;
+    padding: 40px;
+      font-weight: bold;
+      font-size: 40px;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+}
+.allprod h2{
+  font-weight: bold;
+  font-size: 40px;
+}
+
     .story-container {
         display: flex;
         flex-direction: column;
@@ -539,6 +558,12 @@ textarea {
         margin-bottom: 10px;
     }
 
+
+    #addStoryForm select{
+      width: 100%;
+        margin-bottom: 10px;
+  }
+    
     .add-story-form button {
         width: 50%;
         max-width: 600px;
@@ -787,3 +812,4 @@ textarea {
   width: 200px;
   margin-right: 20px;
 }
+
