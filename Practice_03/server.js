@@ -42,6 +42,10 @@ app.get('/login', (req, res) => {
     res.render("login");
 });
 
+app.get('/search', (req, res) => {
+    res.render("search");
+});
+
 
 app.use(express.json());
 app.use("/api/products", require("./Routes/productRoutes"));
@@ -50,12 +54,27 @@ app.use(errorHandler);
 app.use(express.json());
 app.use('/api/orders', require("./Routes/orderRoutes"));
 
-
 app.use(session({ secret: process.env.SESSION_SECRET,
      resave: false,
      saveUninitialized: true,
-     cookie: { maxAge: 3600000 }
+     cookie: { maxAge: 1000 }
 }));
+
+app.use((req, res, next) => {
+    if (!req.session.user) {
+      req.session.user = 'newUser'; 
+    }
+    next();
+  });
+  
+
+app.get('/api/check-session', (req, res) => {
+    if (req.session && req.session.user) {
+      res.json({ valid: true });
+    } else {
+      res.json({ valid: false });
+    }
+  });
 
 function requireAuth(req, res, next) {
     if (req.session && req.session.userId) {
