@@ -17,6 +17,10 @@ const productSchema = mongoose.Schema({
         type: String,
         required: [true, "Please add product price"],
     },
+    isFeatured:{
+        type: Boolean,
+        default: false
+    }
 },{
     timestamps: true,
 });

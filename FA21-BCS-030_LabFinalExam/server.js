@@ -106,6 +106,12 @@ app.post("/login", async (req, res) => {
         }
     });
   });
+
+app.use('/api/products', require("./Routes/productRoutes"));
+
+  app.get('/product-details/:id', (req, res) => {
+    res.render('product-details', { productId: req.params.id });
+});
   
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

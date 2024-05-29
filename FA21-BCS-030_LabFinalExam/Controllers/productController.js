@@ -16,7 +16,7 @@ const getProducts = asyncHandler(async (req,res) =>{
 
 const addProduct = asyncHandler(async (req,res) =>{
     console.log("The request body is: ", req.body);
-    const {imageUrl, name, category, price} = req.body;
+    const {imageUrl, name, category, price,isFeatured} = req.body;
     if(!name || !category || !price){
         res.status(400);
         throw new Error("All fields are mandatory!");
@@ -26,6 +26,7 @@ const addProduct = asyncHandler(async (req,res) =>{
         name,
         category,
         price,
+        isFeatured,
     });
 
     res.status(201).json(product);
@@ -41,7 +42,7 @@ const getProduct = asyncHandler(async (req,res) =>{
         res.status(404);
         throw new Error("Product not found!");
     }
-    res.status(200).json(product);
+    res.render('product-details',{product});
 });
 
 
